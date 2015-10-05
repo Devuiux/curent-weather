@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700)
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+a
+  text-decoration: none
+  color: #878787
+  &:hover
+    color: #bababa
+
+$light: #f5f5f5
+$radius: 3.2px
+$shadow: 0 0 10px #000
+$opacity: 0.75
+$main-color-bg: #212121
+
+@media (min-width: 360px)
+  .float-left
+    float: left
+.clearfix
+  float: none
+  clear: both !important
+.float-right
+  float: right
+.hide
+  display: none
+
+body
+  background-color: #eee        
+  font-size: 62%
+  font-family: Metrophobic, Arial, serif 
+  font-weight: 400
+.main
+  font-size: 1.4em
+  position: relative
+  max-width: 500px
+  margin: 20px 10px
+  padding: 27px
+  background-color: $main-color-bg
+  filter: alpha(opacity=85)
+  opacity: $opacity
+  border-radius: $radius
+  box-shadow: 0 1px 10px #444
+  color: #fff
+  @media (min-width: 520px)
+    margin: 50px auto 25px
+    font-size: 1.6em
+  .search-box
+    font-size: 1.4em
+    input, a
+      &:focus, &:hover
+        outline: none
+        opacity: 1
+    .search
+      width: 100%
+      filter: alpha(opacity=85)
+      opacity: $opacity
+      color: #212121
+      border: none
+      border-radius: $radius
+      box-shadow: $shadow
+      background-color: $light
+      padding: 10px 0
+      margin: 10px 0
+      text-align: center
+    .recent
+      width: 100%
+      padding: 10px
+      font-weight: bold
+      background-color: #bbb
+      filter: alpha(opacity=85)
+      opacity: $opacity
+      color: $main-color-bg
+      border: none
+      border-radius: $radius
+      box-shadow: $shadow
+      cursor: pointer
+      margin-bottom: 10px
+      
+  .list
+    width: 100%
+    color: $light
+    margin: 27px 0
+    border-radius: inherit
+  .message
+    width: 100%
+    color: $light
+    background-color: #ee6e73
+    padding: 10px
+    border-radius: $radius
+  .city-name
+    font-size: 2em
+    text-shadow: $shadow
+    margin-top: 24px
+  .png-temp
+    margin: 24px 0
+    img
+      margin-top: -3px
+      margin-right: 10px
+    span
+      font-size: 2.6em
+      vertical-align: top
+  .days
+    width: 100%
+    text-align: center
+    border-top: 1px solid #666
+    .temp-max
+      color: #878787
+    .temp-min
+      color: #bababa
+  @media (max-width: 360px)
+    .days
+      margin-bottom: 10px
+  @media (min-width: 360px)
+    .days
+      width: 14.285%
+  .degrees-switch
+    user-select: none
+    float: right
+    font-size: 1.2em
+    .degrees-separator
+      font-size: 1.5em
+    input.radio
+      position: absolute
+      overflow: hidden
+      margin-left: -1999px
+      &:checked + span
+        color: #fff
+    label
+      cursor: pointer
+      color: #666
+      &:hover:not(:checked)
+        color: #999
+

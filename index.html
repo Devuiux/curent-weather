@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Current weather data simple</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="main" id="main"></div>
+  <script type="text/ractive" id="template">
+    {{#if error}}
+    <div class="message">{{error}}</div>
+    {{/if}}
+    <div class="search-box">
+      <input type="search" value="{{city}}" id="search" placeholder="city name" class="search" on-keydown="trigger-search" /> {{#if second}}
+      <select name="" value="{{city}}" class="recent" on-change="select-recent">
+        <option value='' disabled selected class="hide">Recent</option>
+        {{#each second}}
+        <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+      {{/if}}
+    </div>
+    <!-- Search Box -->
+    {{#if dataout}}
+    <div class="degrees-switch">
+      <form on-change="degrees-switched">
+        <label for="celsius">
+          <input type="radio" checked class="radio" name="{{degrees}}" id="celsius" value="°C"><span>°C</span>
+        </label>
+        <span class="degrees-separator">|</span>
+        <label for="fahrenheit">
+          <input type="radio" class="radio" name="{{degrees}}" id="fahrenheit" value="°F"><span>°F</span>
+        </label>
+      </form>
+    </div>
+    <!--degrees-switch-->
+    {{#with dataout}}
+    <div class="city-name">{{name}}</div>
+    <div class="png-temp">
+      <img src="http://openweathermap.org/img/w/{{weather[0].icon}}.png" alt="" />
+      <span>{{Math.round(main.temp)}}</span><span> {{degrees}}</span>
+    </div>
+    {{/with}} {{/if}}
+    <div class="clearfix"></div>
+  </script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdn.ractivejs.org/edge/ractive.js'></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

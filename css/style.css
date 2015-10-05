@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #878787;
+}
+a:hover {
+  color: #bababa;
+}
+
+@media (min-width: 360px) {
+  .float-left {
+    float: left;
+  }
+}
+.clearfix {
+  float: none;
+  clear: both !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: #eee;
+  font-size: 62%;
+  font-family: Metrophobic, Arial, serif;
+  font-weight: 400;
+}
+
+.main {
+  font-size: 1.4em;
+  position: relative;
+  max-width: 500px;
+  margin: 20px 10px;
+  padding: 27px;
+  background-color: #212121;
+  filter: alpha(opacity=85);
+  opacity: 0.75;
+  border-radius: 3.2px;
+  box-shadow: 0 1px 10px #444;
+  color: #fff;
+}
+@media (min-width: 520px) {
+  .main {
+    margin: 50px auto 25px;
+    font-size: 1.6em;
+  }
+}
+.main .search-box {
+  font-size: 1.4em;
+}
+.main .search-box input:focus, .main .search-box input:hover, .main .search-box a:focus, .main .search-box a:hover {
+  outline: none;
+  opacity: 1;
+}
+.main .search-box .search {
+  width: 100%;
+  filter: alpha(opacity=85);
+  opacity: 0.75;
+  color: #212121;
+  border: none;
+  border-radius: 3.2px;
+  box-shadow: 0 0 10px #000;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+}
+.main .search-box .recent {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #bbb;
+  filter: alpha(opacity=85);
+  opacity: 0.75;
+  color: #212121;
+  border: none;
+  border-radius: 3.2px;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.main .list {
+  width: 100%;
+  color: #f5f5f5;
+  margin: 27px 0;
+  border-radius: inherit;
+}
+.main .message {
+  width: 100%;
+  color: #f5f5f5;
+  background-color: #ee6e73;
+  padding: 10px;
+  border-radius: 3.2px;
+}
+.main .city-name {
+  font-size: 2em;
+  text-shadow: 0 0 10px #000;
+  margin-top: 24px;
+}
+.main .png-temp {
+  margin: 24px 0;
+}
+.main .png-temp img {
+  margin-top: -3px;
+  margin-right: 10px;
+}
+.main .png-temp span {
+  font-size: 2.6em;
+  vertical-align: top;
+}
+.main .days {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #666;
+}
+.main .days .temp-max {
+  color: #878787;
+}
+.main .days .temp-min {
+  color: #bababa;
+}
+@media (max-width: 360px) {
+  .main .days {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 360px) {
+  .main .days {
+    width: 14.285%;
+  }
+}
+.main .degrees-switch {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  float: right;
+  font-size: 1.2em;
+}
+.main .degrees-switch .degrees-separator {
+  font-size: 1.5em;
+}
+.main .degrees-switch input.radio {
+  position: absolute;
+  overflow: hidden;
+  margin-left: -1999px;
+}
+.main .degrees-switch input.radio:checked + span {
+  color: #fff;
+}
+.main .degrees-switch label {
+  cursor: pointer;
+  color: #666;
+}
+.main .degrees-switch label:hover:not(:checked) {
+  color: #999;
+}
