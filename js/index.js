@@ -45,7 +45,7 @@ function CustomSearch(newRecent) {
   if (city == '') return false;
 
   //can't find how to get json with Ractive
-  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&mode=json&units=' + ractive.get('metric')).done(function(datain) {
+  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=e4a92db9bfa984d9485173ba486101c7&mode=json&units=' + ractive.get('metric')).done(function(datain) {
 
     //set the weather JSON in ractive data
     ractive.set('dataout', datain);
